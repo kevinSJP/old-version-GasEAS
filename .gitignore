@@ -59,6 +59,10 @@ dlldata.c
 *.svclog
 *.scc
 
+*.cmd
+*.exe
+*.asv
+
 # Chutzpah Test files
 _Chutzpah*
 
@@ -121,6 +125,7 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
+Publish/
 
 # Publish Web Output
 *.[Pp]ublish.xml
