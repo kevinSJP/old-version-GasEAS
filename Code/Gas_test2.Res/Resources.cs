@@ -38,7 +38,7 @@ namespace Gas_test2.Res
         /// <returns></returns>
         public string GetApplicationName()
         {
-            return "AgileEAS.NET";
+            return "GasManagement.NET";
         }
 
         /// <summary>

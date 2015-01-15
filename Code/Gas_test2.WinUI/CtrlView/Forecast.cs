@@ -36,7 +36,7 @@ namespace Gas_test2.WinUI.CtrlView
         private bool StartForecast=false;
         static int t = 15;
         
-        System.Threading.Timer Thread_Time; 
+        //System.Threading.Timer Thread_Time; 
 
         public Forecast()
         {
@@ -227,7 +227,7 @@ namespace Gas_test2.WinUI.CtrlView
 
         private void Forecast_ControlRemoved(object sender, ControlEventArgs e)
         {
-            Thread_Time.Dispose();
+            //Thread_Time.Dispose();
             timer1.Enabled = false;
             timer2.Enabled = false;
 

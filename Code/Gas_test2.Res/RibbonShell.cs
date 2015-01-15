@@ -36,7 +36,7 @@ namespace Gas_test2.Res
         {
             if (m.Msg == WM_SYSCOMMAND && (int)m.WParam == SC_CLOSE)
             {
-                string name = "AgileEAS.NET SOA 中间件平台";
+                string name = "能源管理系统";
 
                 try
                 {
@@ -150,7 +150,7 @@ namespace Gas_test2.Res
 
             #region  问本显示
 
-            string name = "AgileEAS.NET SOA 中间件平台";
+            string name = "能源管理系统";
 
             try
             {
@@ -664,7 +664,7 @@ namespace Gas_test2.Res
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            string name = "AgileEAS.NET SOA 中间件平台";
+            string name = "能源管理系统";
 
             try
             {
