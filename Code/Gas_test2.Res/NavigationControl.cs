@@ -75,7 +75,7 @@ namespace Gas_test2.Res
         {
             this.Tree.Nodes.Clear();
 
-            TreeNode root = new TreeNode("DrugShop.NET", 0, 1);
+            TreeNode root = new TreeNode("GasManage.NET", 0, 1);
 
             if (string.Compare(XContext.Account.LoginID, "Guest", true) == 0)
             {

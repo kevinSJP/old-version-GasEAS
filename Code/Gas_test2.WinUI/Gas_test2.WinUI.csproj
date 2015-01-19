@@ -77,11 +77,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.cs">
+      <DependentUpon>Config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlView\EquipAndAlg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlView\EquipAndAlg.Designer.cs">
+      <DependentUpon>EquipAndAlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlView\EquipConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlView\EquipConfig.Designer.cs">
+      <DependentUpon>EquipConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlView\Forecast.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CtrlView\Forecast.Designer.cs">
       <DependentUpon>Forecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlView\GasometerConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlView\GasometerConfig.Designer.cs">
+      <DependentUpon>GasometerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlView\OmeterAndEquip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlView\OmeterAndEquip.Designer.cs">
+      <DependentUpon>OmeterAndEquip.cs</DependentUpon>
     </Compile>
     <Compile Include="CtrlView\Query.cs">
       <SubType>UserControl</SubType>
@@ -95,11 +125,29 @@
     <Compile Include="EquipConfig.Designer.cs">
       <DependentUpon>EquipConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquipTypeSletList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquipTypeSletList.designer.cs">
+      <DependentUpon>EquipTypeSletList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileConfig.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="FileConfig.Designer.cs">
       <DependentUpon>FileConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForecastConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForecastConfig.Designer.cs">
+      <DependentUpon>ForecastConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForecastView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ForecastView.Designer.cs">
+      <DependentUpon>ForecastView.cs</DependentUpon>
     </Compile>
     <Compile Include="FormView\AddAlgorithm.cs">
       <SubType>Form</SubType>
@@ -137,6 +185,12 @@
     <Compile Include="FormView\SetFCSTPara.Designer.cs">
       <DependentUpon>SetFCSTPara.cs</DependentUpon>
     </Compile>
+    <Compile Include="GasometerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GasometerView.Designer.cs">
+      <DependentUpon>GasometerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModuleClass\FuncClass.cs" />
     <Compile Include="ModuleClass\TableName.cs" />
     <Compile Include="Navigation.cs">
@@ -150,6 +204,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryView.Designer.cs">
+      <DependentUpon>QueryView.cs</DependentUpon>
     </Compile>
     <Compile Include="SetAlgorithm.cs">
       <SubType>UserControl</SubType>
@@ -169,8 +229,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlView\EquipAndAlg.resx">
+      <DependentUpon>EquipAndAlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlView\EquipConfig.resx">
+      <DependentUpon>EquipConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CtrlView\Forecast.resx">
       <DependentUpon>Forecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlView\GasometerConfig.resx">
+      <DependentUpon>GasometerConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlView\OmeterAndEquip.resx">
+      <DependentUpon>OmeterAndEquip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlView\Query.resx">
       <DependentUpon>Query.cs</DependentUpon>
@@ -178,8 +253,17 @@
     <EmbeddedResource Include="EquipConfig.resx">
       <DependentUpon>EquipConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EquipTypeSletList.resx">
+      <DependentUpon>EquipTypeSletList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileConfig.resx">
       <DependentUpon>FileConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForecastConfig.resx">
+      <DependentUpon>ForecastConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForecastView.resx">
+      <DependentUpon>ForecastView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormView\AddAlgorithm.resx">
       <DependentUpon>AddAlgorithm.cs</DependentUpon>
@@ -196,12 +280,18 @@
     <EmbeddedResource Include="FormView\HaveBack.resx">
       <DependentUpon>HaveBack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GasometerView.resx">
+      <DependentUpon>GasometerView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Navigation.resx">
       <DependentUpon>Navigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryView.resx">
+      <DependentUpon>QueryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetAlgorithm.resx">
       <DependentUpon>SetAlgorithm.cs</DependentUpon>

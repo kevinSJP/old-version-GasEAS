@@ -36,8 +36,10 @@ namespace Gas_test2.Res
 
         private void lbDrugDict_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            System.Type T=typeof(Config);
+
             //System.Type T = typeof(DrugDictList);
-            //EAS.Application.Instance.OpenModule(T);
+            EAS.Application.Instance.OpenModule(T);
         }
 
         private void lbProvider_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -48,8 +50,9 @@ namespace Gas_test2.Res
 
         private void lbDrugIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            System.Type T = typeof(QueryView);
             //System.Type T = typeof(DrugIn);
-            //EAS.Application.Instance.OpenModule(T);
+            EAS.Application.Instance.OpenModule(T);
         }
 
         private void lbDrugBackProvder_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -78,8 +81,9 @@ namespace Gas_test2.Res
 
         private void lbDrugLimit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            System.Type T = typeof(ForecastConfig);
             //System.Type T = typeof(DrugLimitQuery);
-            //EAS.Application.Instance.OpenModule(T);
+            EAS.Application.Instance.OpenModule(T);
         }
 
         private void lbDrugLost_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -102,8 +106,9 @@ namespace Gas_test2.Res
 
         private void lbDrugSale_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            System.Type T = typeof(GasometerView);
             //System.Type T = typeof(DrugSale);
-            //EAS.Application.Instance.OpenModule(T);
+            EAS.Application.Instance.OpenModule(T);
         }
 
         private void lbDrugSaleBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

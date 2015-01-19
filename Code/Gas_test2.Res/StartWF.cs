@@ -10,7 +10,7 @@ using EAS.Modularization;
 
 namespace Gas_test2.Res
 {
-    [Module("00000000-0000-0000-0000-000000000000", "启始页", "AgileEAS.NET平台WinForm/Wpf容器起始页模块")]
+    [Module("41B94B7C-62CE-478A-8986-06A4731E2822", "启始页", "AgileEAS.NET平台WinForm/Wpf容器起始页模块")]
     public partial class StartWF : UserControl
     {
         [ModuleStart]
