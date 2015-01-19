@@ -26,6 +26,11 @@ namespace Gas_test2.WinUI
 
     public partial class Config : UserControl
     {
+
+        #region 定义与初始化
+        int CtrlFlag = 0;   //控件显示标识位
+        #endregion
+
         public Config()
         {
             InitializeComponent();
@@ -34,6 +39,55 @@ namespace Gas_test2.WinUI
         [ModuleStart]
         public void StartEx()
         {
+
+        }
+
+        private void Config_Load(object sender, EventArgs e)
+        {
+            //CtrlView.GasometerConfig Ctrl = new CtrlView.GasometerConfig();
+            //panel1.Controls.Add(Ctrl);
+            btn_Next.Text = "开始配置";
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            
+
+            switch (CtrlFlag)
+            {
+                case 0:
+                    CtrlView.GasometerConfig Ctrl0 = new CtrlView.GasometerConfig();
+                    panel1.Controls.Clear();
+                    panel1.Controls.Add(Ctrl0);
+                    break;
+                case 1:
+                    CtrlView.EquipConfig Ctrl1 = new CtrlView.EquipConfig();
+                    panel1.Controls.Clear();
+                    panel1.Controls.Add(Ctrl1);
+                    break;
+                case 2:
+                    CtrlView.OmeterAndEquip Ctrl2 = new CtrlView.OmeterAndEquip();
+                    panel1.Controls.Clear();
+                    panel1.Controls.Add(Ctrl2);
+                    break;
+                case 3:
+                    CtrlView.EquipAndAlg Ctrl4 = new CtrlView.EquipAndAlg();
+                    panel1.Controls.Clear();
+                    panel1.Controls.Add(Ctrl4);
+                    btn_Next.Text = "完成";
+                    break;
+                case 4:
+                    btn_Next.Text = "再次配置";
+                    CtrlFlag = -1;
+                    break;
+                default:
+                    btn_Next.Text = "流程错误";
+                    
+                    break;
+            
+            }
+
+            CtrlFlag = CtrlFlag + 1;
 
         }
 

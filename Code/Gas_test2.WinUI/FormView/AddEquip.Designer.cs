@@ -34,11 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSName
             // 
-            this.txtSName.Location = new System.Drawing.Point(140, 111);
+            this.txtSName.Location = new System.Drawing.Point(140, 92);
             this.txtSName.Name = "txtSName";
             this.txtSName.Size = new System.Drawing.Size(100, 21);
             this.txtSName.TabIndex = 9;
@@ -53,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 114);
+            this.label2.Location = new System.Drawing.Point(44, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 7;
@@ -88,11 +90,29 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(140, 142);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 145);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "设备数量：";
+            // 
             // AddEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.txtSName);
             this.Controls.Add(this.txtName);
@@ -114,5 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

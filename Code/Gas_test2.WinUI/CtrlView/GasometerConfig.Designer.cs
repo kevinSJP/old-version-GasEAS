@@ -52,6 +52,7 @@
             this.groupBox1.Controls.Add(this.btn_Add);
             this.groupBox1.Controls.Add(this.lbox_Gasometer);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(363, 457);
@@ -61,44 +62,40 @@
             // 
             // btn_Alter
             // 
-            this.btn_Alter.Location = new System.Drawing.Point(128, 333);
+            this.btn_Alter.Location = new System.Drawing.Point(128, 381);
             this.btn_Alter.Name = "btn_Alter";
-            this.btn_Alter.Size = new System.Drawing.Size(75, 23);
+            this.btn_Alter.Size = new System.Drawing.Size(75, 25);
             this.btn_Alter.TabIndex = 12;
             this.btn_Alter.Text = "修改";
             this.btn_Alter.UseVisualStyleBackColor = true;
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(220, 333);
+            this.btn_Delete.Location = new System.Drawing.Point(220, 381);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.Size = new System.Drawing.Size(75, 25);
             this.btn_Delete.TabIndex = 11;
             this.btn_Delete.Text = "删除";
             this.btn_Delete.UseVisualStyleBackColor = true;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(31, 333);
+            this.btn_Add.Location = new System.Drawing.Point(31, 381);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.Size = new System.Drawing.Size(75, 25);
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "添加";
             this.btn_Add.UseVisualStyleBackColor = true;
             // 
             // lbox_Gasometer
             // 
-            this.lbox_Gasometer.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbox_Gasometer.Font = new System.Drawing.Font("宋体", 12F);
             this.lbox_Gasometer.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lbox_Gasometer.FormattingEnabled = true;
-            this.lbox_Gasometer.ItemHeight = 19;
-            this.lbox_Gasometer.Items.AddRange(new object[] {
-            "高炉煤气柜",
-            "转炉煤气柜",
-            "焦炉煤气柜"});
+            this.lbox_Gasometer.ItemHeight = 16;
             this.lbox_Gasometer.Location = new System.Drawing.Point(31, 48);
             this.lbox_Gasometer.Name = "lbox_Gasometer";
-            this.lbox_Gasometer.Size = new System.Drawing.Size(264, 251);
+            this.lbox_Gasometer.Size = new System.Drawing.Size(265, 292);
             this.lbox_Gasometer.TabIndex = 9;
             // 
             // GasometerConfig

@@ -43,6 +43,7 @@
             this.dgv_L3 = new System.Windows.Forms.DataGridView();
             this.L3Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.btn_Alter = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_L1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -55,31 +56,33 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Alter);
             this.groupBox1.Controls.Add(this.btn_Delete);
             this.groupBox1.Controls.Add(this.btn_Add);
             this.groupBox1.Controls.Add(this.lbox_Equip);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(272, 457);
+            this.groupBox1.Size = new System.Drawing.Size(324, 457);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "可选设备：";
+            this.groupBox1.Text = "煤气相关设备：";
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(155, 341);
+            this.btn_Delete.Location = new System.Drawing.Point(214, 382);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(91, 48);
+            this.btn_Delete.Size = new System.Drawing.Size(75, 25);
             this.btn_Delete.TabIndex = 7;
             this.btn_Delete.Text = "删除";
             this.btn_Delete.UseVisualStyleBackColor = true;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(27, 341);
+            this.btn_Add.Location = new System.Drawing.Point(27, 382);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(91, 48);
+            this.btn_Add.Size = new System.Drawing.Size(75, 25);
             this.btn_Add.TabIndex = 6;
             this.btn_Add.Text = "添加";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -87,10 +90,10 @@
             // lbox_Equip
             // 
             this.lbox_Equip.FormattingEnabled = true;
-            this.lbox_Equip.ItemHeight = 12;
+            this.lbox_Equip.ItemHeight = 16;
             this.lbox_Equip.Location = new System.Drawing.Point(24, 31);
             this.lbox_Equip.Name = "lbox_Equip";
-            this.lbox_Equip.Size = new System.Drawing.Size(222, 292);
+            this.lbox_Equip.Size = new System.Drawing.Size(265, 292);
             this.lbox_Equip.TabIndex = 5;
             // 
             // dgv_L1
@@ -102,7 +105,7 @@
             this.dgv_L1.Location = new System.Drawing.Point(3, 3);
             this.dgv_L1.Name = "dgv_L1";
             this.dgv_L1.RowTemplate.Height = 23;
-            this.dgv_L1.Size = new System.Drawing.Size(237, 369);
+            this.dgv_L1.Size = new System.Drawing.Size(237, 365);
             this.dgv_L1.TabIndex = 0;
             // 
             // L1Name
@@ -115,7 +118,8 @@
             this.tabControl1.Controls.Add(this.tbPage_L1);
             this.tabControl1.Controls.Add(this.tbPage_L2);
             this.tabControl1.Controls.Add(this.tbPage_L3);
-            this.tabControl1.Location = new System.Drawing.Point(330, 11);
+            this.tabControl1.Font = new System.Drawing.Font("宋体", 12F);
+            this.tabControl1.Location = new System.Drawing.Point(358, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(251, 401);
@@ -124,10 +128,10 @@
             // tbPage_L1
             // 
             this.tbPage_L1.Controls.Add(this.dgv_L1);
-            this.tbPage_L1.Location = new System.Drawing.Point(4, 22);
+            this.tbPage_L1.Location = new System.Drawing.Point(4, 26);
             this.tbPage_L1.Name = "tbPage_L1";
             this.tbPage_L1.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPage_L1.Size = new System.Drawing.Size(243, 375);
+            this.tbPage_L1.Size = new System.Drawing.Size(243, 371);
             this.tbPage_L1.TabIndex = 0;
             this.tbPage_L1.Text = "直采数据";
             this.tbPage_L1.UseVisualStyleBackColor = true;
@@ -195,6 +199,15 @@
             this.treeView1.Size = new System.Drawing.Size(194, 457);
             this.treeView1.TabIndex = 21;
             // 
+            // btn_Alter
+            // 
+            this.btn_Alter.Location = new System.Drawing.Point(119, 382);
+            this.btn_Alter.Name = "btn_Alter";
+            this.btn_Alter.Size = new System.Drawing.Size(75, 25);
+            this.btn_Alter.TabIndex = 13;
+            this.btn_Alter.Text = "修改";
+            this.btn_Alter.UseVisualStyleBackColor = true;
+            // 
             // EquipConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -233,5 +246,6 @@
         private System.Windows.Forms.DataGridView dgv_L3;
         private System.Windows.Forms.DataGridViewTextBoxColumn L3Name;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button btn_Alter;
     }
 }

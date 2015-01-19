@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tree_Alg = new System.Windows.Forms.TreeView();
             this.cbox_Eq = new System.Windows.Forms.ComboBox();
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.DG_Alg = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.C_Alg = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.gbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,13 +54,14 @@
             this.cbox_Eq.FormattingEnabled = true;
             this.cbox_Eq.Location = new System.Drawing.Point(33, 31);
             this.cbox_Eq.Name = "cbox_Eq";
-            this.cbox_Eq.Size = new System.Drawing.Size(193, 20);
+            this.cbox_Eq.Size = new System.Drawing.Size(193, 24);
             this.cbox_Eq.TabIndex = 0;
             // 
             // gbox1
             // 
             this.gbox1.Controls.Add(this.cbox_Eq);
             this.gbox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbox1.Font = new System.Drawing.Font("宋体", 12F);
             this.gbox1.Location = new System.Drawing.Point(0, 0);
             this.gbox1.Name = "gbox1";
             this.gbox1.Size = new System.Drawing.Size(642, 85);
@@ -80,16 +82,6 @@
             this.DG_Alg.Size = new System.Drawing.Size(642, 372);
             this.DG_Alg.TabIndex = 0;
             // 
-            // C_Alg
-            // 
-            this.C_Alg.HeaderText = "可选算法";
-            this.C_Alg.Name = "C_Alg";
-            // 
-            // C_Factor
-            // 
-            this.C_Factor.HeaderText = "算法因素1";
-            this.C_Factor.Name = "C_Factor";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.DG_Alg);
@@ -98,6 +90,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(642, 372);
             this.panel1.TabIndex = 8;
+            // 
+            // C_Alg
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.C_Alg.DefaultCellStyle = dataGridViewCellStyle1;
+            this.C_Alg.HeaderText = "可选算法";
+            this.C_Alg.Name = "C_Alg";
+            // 
+            // C_Factor
+            // 
+            this.C_Factor.HeaderText = "算法因素1";
+            this.C_Factor.Name = "C_Factor";
             // 
             // EquipAndAlg
             // 
@@ -121,9 +125,9 @@
         private System.Windows.Forms.ComboBox cbox_Eq;
         private System.Windows.Forms.GroupBox gbox1;
         private System.Windows.Forms.DataGridView DG_Alg;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Alg;
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor;
-        private System.Windows.Forms.Panel panel1;
 
     }
 }

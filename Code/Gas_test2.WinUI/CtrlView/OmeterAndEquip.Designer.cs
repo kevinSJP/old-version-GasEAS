@@ -57,6 +57,7 @@
             // 
             this.groupBox1.Controls.Add(this.lbox_Ometer);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(280, 457);
@@ -67,7 +68,7 @@
             // lbox_Ometer
             // 
             this.lbox_Ometer.FormattingEnabled = true;
-            this.lbox_Ometer.ItemHeight = 12;
+            this.lbox_Ometer.ItemHeight = 16;
             this.lbox_Ometer.Location = new System.Drawing.Point(60, 50);
             this.lbox_Ometer.Name = "lbox_Ometer";
             this.lbox_Ometer.Size = new System.Drawing.Size(161, 340);
@@ -92,6 +93,7 @@
             this.dataGridViewTextBoxColumn2});
             this.DG_In.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DG_In.Location = new System.Drawing.Point(159, 0);
+            this.DG_In.Margin = new System.Windows.Forms.Padding(8);
             this.DG_In.Name = "DG_In";
             this.DG_In.RowTemplate.Height = 23;
             this.DG_In.Size = new System.Drawing.Size(505, 229);
@@ -125,9 +127,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 96);
+            this.label1.Font = new System.Drawing.Font("宋体", 12F);
+            this.label1.Location = new System.Drawing.Point(28, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "输入设备：";
             // 
@@ -150,6 +153,7 @@
             this.C_Percent});
             this.DG_Out.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DG_Out.Location = new System.Drawing.Point(159, 0);
+            this.DG_Out.Margin = new System.Windows.Forms.Padding(8);
             this.DG_Out.Name = "DG_Out";
             this.DG_Out.RowTemplate.Height = 23;
             this.DG_Out.Size = new System.Drawing.Size(505, 228);
@@ -185,9 +189,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F);
             this.label2.Location = new System.Drawing.Point(38, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "输出设备：";
             // 
