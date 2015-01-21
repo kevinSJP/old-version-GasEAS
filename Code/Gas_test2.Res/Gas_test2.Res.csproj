@@ -313,11 +313,17 @@
     <None Include="Resources\ban1.jpg" />
     <None Include="Resources\closed_floder.ico" />
     <None Include="Resources\buttonItem1.Image.png" />
+    <Content Include="Resources\about2.jpg" />
+    <Content Include="Resources\ban12.jpg" />
     <Content Include="Resources\drug_basket.ico" />
+    <Content Include="Resources\FLow2.jpg" />
     <Content Include="Resources\left.jpg" />
     <None Include="Resources\FLow.jpg" />
+    <None Include="Resources\login.jpg" />
+    <Content Include="Resources\left2.jpg" />
     <Content Include="Resources\right.jpg" />
     <None Include="Resources\top2.jpg" />
+    <Content Include="Resources\top22.jpg" />
     <Content Include="Resources\药店图标.jpg" />
     <None Include="Resources\about.jpg" />
     <None Include="Resources\His.ico" />

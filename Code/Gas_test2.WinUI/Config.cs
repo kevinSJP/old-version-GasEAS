@@ -47,6 +47,7 @@ namespace Gas_test2.WinUI
             //CtrlView.GasometerConfig Ctrl = new CtrlView.GasometerConfig();
             //panel1.Controls.Add(Ctrl);
             btn_Next.Text = "开始配置";
+            //this.panel2.Anchor= 65;
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
@@ -59,21 +60,26 @@ namespace Gas_test2.WinUI
                     CtrlView.GasometerConfig Ctrl0 = new CtrlView.GasometerConfig();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl0);
+                    Ctrl0.Dock = DockStyle.Fill;
+                    btn_Next.Text = "下一步";
                     break;
                 case 1:
                     CtrlView.EquipConfig Ctrl1 = new CtrlView.EquipConfig();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl1);
+                    Ctrl1.Dock = DockStyle.Fill;
                     break;
                 case 2:
                     CtrlView.OmeterAndEquip Ctrl2 = new CtrlView.OmeterAndEquip();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl2);
+                    Ctrl2.Dock = DockStyle.Fill;
                     break;
                 case 3:
-                    CtrlView.EquipAndAlg Ctrl4 = new CtrlView.EquipAndAlg();
+                    CtrlView.EquipAndAlg Ctrl3 = new CtrlView.EquipAndAlg();
                     panel1.Controls.Clear();
-                    panel1.Controls.Add(Ctrl4);
+                    panel1.Controls.Add(Ctrl3);
+                    Ctrl3.Dock = DockStyle.Fill;
                     btn_Next.Text = "完成";
                     break;
                 case 4:

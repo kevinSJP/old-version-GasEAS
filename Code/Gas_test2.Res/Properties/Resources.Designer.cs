@@ -73,6 +73,16 @@ namespace Gas_test2.Res.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap about2 {
+            get {
+                object obj = ResourceManager.GetObject("about2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap agile_logo {
             get {
                 object obj = ResourceManager.GetObject("agile_logo", resourceCulture);
@@ -86,6 +96,16 @@ namespace Gas_test2.Res.Properties {
         internal static System.Drawing.Bitmap ban1 {
             get {
                 object obj = ResourceManager.GetObject("ban1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap ban12 {
+            get {
+                object obj = ResourceManager.GetObject("ban12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -131,6 +151,16 @@ namespace Gas_test2.Res.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap FLow2 {
+            get {
+                object obj = ResourceManager.GetObject("FLow2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon His {
@@ -146,6 +176,26 @@ namespace Gas_test2.Res.Properties {
         internal static System.Drawing.Bitmap left {
             get {
                 object obj = ResourceManager.GetObject("left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap left2 {
+            get {
+                object obj = ResourceManager.GetObject("left2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +226,16 @@ namespace Gas_test2.Res.Properties {
         internal static System.Drawing.Bitmap top2 {
             get {
                 object obj = ResourceManager.GetObject("top2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap top22 {
+            get {
+                object obj = ResourceManager.GetObject("top22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

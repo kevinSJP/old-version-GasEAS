@@ -19,7 +19,7 @@ namespace Gas_test2.Res
 
         protected override void OnLoad(EventArgs e)
         {
-            left = Properties.Resources.left;
+            left = Properties.Resources.left2;
             back = Properties.Resources.bj;
             right = Properties.Resources.right;
         }

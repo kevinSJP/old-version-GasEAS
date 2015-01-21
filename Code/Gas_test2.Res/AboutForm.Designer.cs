@@ -139,7 +139,7 @@ namespace Gas_test2.Res
             // picLogo
             // 
             this.picLogo.BackColor = System.Drawing.Color.White;
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Image = global::Gas_test2.Res.Properties.Resources.about2;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(470, 100);
