@@ -34,7 +34,10 @@
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.DG_Alg = new System.Windows.Forms.DataGridView();
             this.C_Alg = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.C_Factor = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.C_Factor1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.C_Factor2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.C_Factor3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.C_Factor4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).BeginInit();
@@ -48,6 +51,7 @@
             this.Tree_Alg.Name = "Tree_Alg";
             this.Tree_Alg.Size = new System.Drawing.Size(302, 457);
             this.Tree_Alg.TabIndex = 6;
+            this.Tree_Alg.DoubleClick += new System.EventHandler(this.Tree_Alg_DoubleClick);
             // 
             // cbox_Eq
             // 
@@ -56,6 +60,7 @@
             this.cbox_Eq.Name = "cbox_Eq";
             this.cbox_Eq.Size = new System.Drawing.Size(193, 24);
             this.cbox_Eq.TabIndex = 0;
+            this.cbox_Eq.SelectedIndexChanged += new System.EventHandler(this.cbox_Eq_SelectedIndexChanged);
             // 
             // gbox1
             // 
@@ -74,7 +79,10 @@
             this.DG_Alg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Alg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.C_Alg,
-            this.C_Factor});
+            this.C_Factor1,
+            this.C_Factor2,
+            this.C_Factor3,
+            this.C_Factor4});
             this.DG_Alg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DG_Alg.Location = new System.Drawing.Point(0, 0);
             this.DG_Alg.Name = "DG_Alg";
@@ -89,10 +97,25 @@
             this.C_Alg.HeaderText = "可选算法";
             this.C_Alg.Name = "C_Alg";
             // 
-            // C_Factor
+            // C_Factor1
             // 
-            this.C_Factor.HeaderText = "算法因素1";
-            this.C_Factor.Name = "C_Factor";
+            this.C_Factor1.HeaderText = "算法因素1";
+            this.C_Factor1.Name = "C_Factor1";
+            // 
+            // C_Factor2
+            // 
+            this.C_Factor2.HeaderText = "算法因素2";
+            this.C_Factor2.Name = "C_Factor2";
+            // 
+            // C_Factor3
+            // 
+            this.C_Factor3.HeaderText = "算法因素3";
+            this.C_Factor3.Name = "C_Factor3";
+            // 
+            // C_Factor4
+            // 
+            this.C_Factor4.HeaderText = "算法因素4";
+            this.C_Factor4.Name = "C_Factor4";
             // 
             // panel1
             // 
@@ -128,7 +151,10 @@
         private System.Windows.Forms.DataGridView DG_Alg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Alg;
-        private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor;
+        private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor4;
 
     }
 }

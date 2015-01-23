@@ -52,7 +52,7 @@ namespace Gas_test2.WinUI
         private void FreshTree()
         {
             dataset.Clear();
-            dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipName", "EquipTypeSlet");
+            dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipTypeSlet");
             Tree_Equip.Nodes.Clear();
             int j = 0;
             foreach (DataRow dr in dataset.Tables[0].Rows)
@@ -63,7 +63,7 @@ namespace Gas_test2.WinUI
 
                 for (int i = 0; i < equipnum;i++ )
                 {
-                    TreeNode tn1 = new TreeNode((i + 1)+"#" + dataset.Tables[0].Rows[j]["EquipNum"].ToString());
+                    TreeNode tn1 = new TreeNode((i + 1)+"#" + dataset.Tables[0].Rows[j]["EquipName"].ToString());
                     tn.Nodes.Add(tn1);
                 }
 
@@ -245,7 +245,6 @@ namespace Gas_test2.WinUI
             //        dv["FLOW"] = 500;
             //    double y = Convert.ToDouble(dv["FLOW"]);
             //    list.Add(x, y);
-
 
             //}
 

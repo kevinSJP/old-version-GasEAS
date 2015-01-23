@@ -106,8 +106,36 @@ namespace Gas_test2.WinUI.CtrlView
             int j = 0;
             foreach (DataRow dr in dataset.Tables[0].Rows)
             {
-                DG_In.Rows[j].Cells[0].Value = dataset.Tables[0].Rows[j]["EquipName"];
-                DG_Out.Rows[j].Cells[0].Value = dataset.Tables[0].Rows[j]["EquipName"];
+
+                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewTextBoxCell textboxcell = new DataGridViewTextBoxCell();
+                textboxcell.Value = dataset.Tables[0].Rows[j][0];
+                row.Cells.Add(textboxcell);
+                DataGridViewCheckBoxCell checkcell = new DataGridViewCheckBoxCell();
+                checkcell.Value = false;
+                row.Cells.Add(checkcell);
+                DataGridViewTextBoxCell txtboxcell = new DataGridViewTextBoxCell();
+                row.Cells.Add(txtboxcell);
+                DG_In.Rows.Add(row);
+
+                DataGridViewRow row2 = new DataGridViewRow();
+                DataGridViewTextBoxCell textboxcell2 = new DataGridViewTextBoxCell();
+                textboxcell2.Value = dataset.Tables[0].Rows[j][0];
+                row2.Cells.Add(textboxcell2);
+                DataGridViewCheckBoxCell checkcell2 = new DataGridViewCheckBoxCell();
+                checkcell2.Value = false;
+                row2.Cells.Add(checkcell2);
+                DataGridViewTextBoxCell txtboxcell2 = new DataGridViewTextBoxCell();
+                row2.Cells.Add(txtboxcell2);
+                DG_Out.Rows.Add(row2);
+
+
+                //DataGridViewRow row = new DataGridViewRow();
+                //row.Cells["设备名称"].Value = dataset.Tables[0].Rows[j][0];//设置row属性
+                //DG_In.Rows.Add(row);
+                //DG_Out.Rows.Add(row);
+                //DG_In.Rows[j].Cells[0].Value = dataset.Tables[0].Rows[j][0];
+                //DG_Out.Rows[j].Cells[0].Value = dataset.Tables[0].Rows[j][0];
                 j++;
             }
         }

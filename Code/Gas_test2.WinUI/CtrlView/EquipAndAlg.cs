@@ -20,6 +20,7 @@ namespace Gas_test2.WinUI.CtrlView
     public partial class EquipAndAlg : UserControl
     {
         private DataSet dataset = new DataSet();
+        
 
         public EquipAndAlg()
         {
@@ -35,11 +36,58 @@ namespace Gas_test2.WinUI.CtrlView
 
         private void FreshDG()
         {
-            throw new NotImplementedException();
+            
+            if (cbox_Eq.Text.Trim() != "")
+            {
+                DataSet datasetAlg = new DataSet();
+                datasetAlg = ServiceContainer.GetService<IGasDAL>().QueryData("AlgName","AlgTypeAbl" );
+
+                DG_Alg.Rows.Clear();
+                dataset.Clear();
+                dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipAlgSlet", "EquipName", cbox_Eq.Text.Trim());
+                int j = 0;
+                foreach (DataRow dr in dataset.Tables[0].Rows)
+                {
+
+                    string Factor= dataset.Tables[0].Rows[j]["Factor"].ToString();
+
+                    string[] FactorD = Factor.Split(';');
+                    
+
+                    DataGridViewRow row = new DataGridViewRow();
+                    DataGridViewComboBoxCell comboxcell0 = new DataGridViewComboBoxCell();
+                    for (int i = 0; i < datasetAlg.Tables[0].Rows.Count; i++)
+                    {
+                        comboxcell0.Items.Add(datasetAlg.Tables[0].Rows[i]["AlgName"]);
+                    }
+                    row.Cells.Add(comboxcell0);
+                    comboxcell0.DisplayMember = dataset.Tables[0].Rows[j]["AlgName"].ToString();
+                    //comboxcell0.Value = dataset.Tables[0].Rows[j]["AlgName"];
+                    
+                    
+                    for (int i = 0; i < FactorD.Count() - 1; i++)
+                    {
+                        DataGridViewComboBoxCell comboxcell = new DataGridViewComboBoxCell();
+                        comboxcell.Items.Add(FactorD[i]);
+                        //comboxcell.Value=FactorD[i];
+                        row.Cells.Add(comboxcell);
+                        
+
+                    }
+                    
+
+                    DG_Alg.Rows.Add(row);
+
+
+                    j++;
+                }
+            }
         }
 
         private void FreshTree()
         {
+            DataSet dataset2 = new DataSet();
+
             dataset.Clear();
             dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipName","EquipTypeSlet");
             Tree_Alg.Nodes.Clear();
@@ -49,18 +97,18 @@ namespace Gas_test2.WinUI.CtrlView
                 string equipname = dataset.Tables[0].Rows[j]["EquipName"].ToString();
                 TreeNode tn = Tree_Alg.Nodes.Add(equipname);
 
-                dataset.Clear();
-                dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipAlgSlet", "EquipName", equipname);
+                dataset2.Clear();
+                dataset2 = ServiceContainer.GetService<IGasDAL>().QueryData("EquipAlgSlet", "EquipName", equipname);
 
                 int k = 0;
-                foreach (DataRow dr2 in dataset.Tables[0].Rows)
+                foreach (DataRow dr2 in dataset2.Tables[0].Rows)
                 {
-                    string L1;
+                    string Factor;
 
-                    TreeNode tn1 = new TreeNode(dataset.Tables[0].Rows[j]["AlgName"].ToString());
+                    TreeNode tn1 = new TreeNode(dataset2.Tables[0].Rows[k]["AlgName"].ToString());
                     tn.Nodes.Add(tn1);
-                    L1 = dataset.Tables[0].Rows[k]["L1"].ToString();
-                    string[] L1D = L1.Split(';');
+                    Factor = dataset2.Tables[0].Rows[k]["Factor"].ToString();
+                    string[] L1D = Factor.Split(';');
                     for (int i = 0; i < L1D.Count() - 1; i++)
                     {
                         TreeNode tn12 = new TreeNode(L1D[i]);
@@ -85,6 +133,16 @@ namespace Gas_test2.WinUI.CtrlView
                 cbox_Eq.Items.Add(dataset.Tables[0].Rows[j][0]);
                 j++;
             }
+        }
+
+        private void Tree_Alg_DoubleClick(object sender, EventArgs e)
+        {
+            FreshTree();
+        }
+
+        private void cbox_Eq_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FreshDG();
         }
     }
 }

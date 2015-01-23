@@ -41,7 +41,7 @@
             this.lbDrugDict.BackColor = System.Drawing.Color.Transparent;
             this.lbDrugDict.Font = new System.Drawing.Font("宋体", 16F);
             this.lbDrugDict.ForeColor = System.Drawing.Color.Blue;
-            this.lbDrugDict.Location = new System.Drawing.Point(563, 78);
+            this.lbDrugDict.Location = new System.Drawing.Point(563, 60);
             this.lbDrugDict.Name = "lbDrugDict";
             this.lbDrugDict.Size = new System.Drawing.Size(142, 22);
             this.lbDrugDict.TabIndex = 19;
