@@ -73,6 +73,7 @@
             this.lbox_Ometer.Name = "lbox_Ometer";
             this.lbox_Ometer.Size = new System.Drawing.Size(161, 340);
             this.lbox_Ometer.TabIndex = 0;
+            this.lbox_Ometer.SelectedIndexChanged += new System.EventHandler(this.lbox_Ometer_SelectedIndexChanged);
             // 
             // panel1
             // 

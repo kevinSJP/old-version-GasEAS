@@ -11,6 +11,7 @@ namespace Gas_test2.WinUI.ModuleClass
     public class FuncClass
     {
         #region UI属性
+        public static string clikUI;
         public static string[] ActivContrl=new string[2];
         #endregion
         

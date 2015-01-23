@@ -33,9 +33,9 @@
             this.cbox_Eq = new System.Windows.Forms.ComboBox();
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.DG_Alg = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.C_Alg = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -82,15 +82,6 @@
             this.DG_Alg.Size = new System.Drawing.Size(642, 372);
             this.DG_Alg.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DG_Alg);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 372);
-            this.panel1.TabIndex = 8;
-            // 
             // C_Alg
             // 
             dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -103,6 +94,15 @@
             this.C_Factor.HeaderText = "算法因素1";
             this.C_Factor.Name = "C_Factor";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DG_Alg);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(642, 372);
+            this.panel1.TabIndex = 8;
+            // 
             // EquipAndAlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.Tree_Alg);
             this.Name = "EquipAndAlg";
             this.Size = new System.Drawing.Size(944, 457);
+            this.Load += new System.EventHandler(this.EquipAndAlg_Load);
             this.gbox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).EndInit();
             this.panel1.ResumeLayout(false);

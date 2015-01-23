@@ -20,13 +20,38 @@ namespace Gas_test2.WinUI.FormView
 
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            if(txtName.Text.Trim()!=""&&txtSName.Text.Trim()!="")
-                ServiceContainer.GetService<IGasDAL>().InsertData("EquipTypeSlet", "EquipName", txtName.Text.Trim(), "ETabName", txtSName.Text.Trim());
+            if (ModuleClass.FuncClass.clikUI == "ometer")
+            {
+                if (txtName.Text.Trim() != "" && txtSName.Text.Trim() != ""&&txtNum.Text.Trim()!="")
+                    ServiceContainer.GetService<IGasDAL>().InsertData("GasometerType", "GasometerName", txtName.Text.Trim(), "OTabName", txtSName.Text.Trim(), "GasometerNum", txtNum.Text.Trim());
+            }
+            else if (ModuleClass.FuncClass.clikUI == "equip")
+            {
+                if (txtName.Text.Trim() != "" && txtSName.Text.Trim() != "" && txtNum.Text.Trim() != "")
+                    ServiceContainer.GetService<IGasDAL>().InsertData("EquipTypeSlet", "EquipName", txtName.Text.Trim(), "ETabName", txtSName.Text.Trim(), "EquipNum", txtNum.Text.Trim());
+            }
+
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddEquip_Load(object sender, EventArgs e)
+        {
+            if (ModuleClass.FuncClass.clikUI=="ometer")
+            {
+                label1.Text = "煤气柜名称：";
+                label2.Text = "煤气柜简称：";
+                label3.Text = "煤气柜数量：";
+            }
+            else if (ModuleClass.FuncClass.clikUI == "equip")
+            {
+                label1.Text = "设备名称：";
+                label2.Text = "设备简称：";
+                label3.Text = "设备数量：";
+            }
         }
     }
 }

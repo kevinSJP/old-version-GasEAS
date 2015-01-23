@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -90,12 +90,12 @@
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
-            // textBox1
+            // txtNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 12;
+            this.txtNum.Location = new System.Drawing.Point(140, 142);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(100, 21);
+            this.txtNum.TabIndex = 12;
             // 
             // label3
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNum);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.txtSName);
@@ -121,6 +121,7 @@
             this.Controls.Add(this.btn_Enter);
             this.Name = "AddEquip";
             this.Text = "AddEquip";
+            this.Load += new System.EventHandler(this.AddEquip_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +135,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label3;
     }
 }

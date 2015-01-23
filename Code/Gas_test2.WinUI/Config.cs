@@ -64,18 +64,21 @@ namespace Gas_test2.WinUI
                     btn_Next.Text = "下一步";
                     break;
                 case 1:
+                    //CreateOmter
                     CtrlView.EquipConfig Ctrl1 = new CtrlView.EquipConfig();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl1);
                     Ctrl1.Dock = DockStyle.Fill;
                     break;
                 case 2:
+                    //CrateEquip
                     CtrlView.OmeterAndEquip Ctrl2 = new CtrlView.OmeterAndEquip();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl2);
                     Ctrl2.Dock = DockStyle.Fill;
                     break;
                 case 3:
+                    //CreateOmterEquip
                     CtrlView.EquipAndAlg Ctrl3 = new CtrlView.EquipAndAlg();
                     panel1.Controls.Clear();
                     panel1.Controls.Add(Ctrl3);
@@ -83,6 +86,7 @@ namespace Gas_test2.WinUI
                     btn_Next.Text = "完成";
                     break;
                 case 4:
+                    //CreateEquipAlg
                     btn_Next.Text = "再次配置";
                     CtrlFlag = -1;
                     break;

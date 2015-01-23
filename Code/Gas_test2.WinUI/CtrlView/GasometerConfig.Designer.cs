@@ -39,10 +39,10 @@
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(387, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(557, 457);
+            this.panel1.Size = new System.Drawing.Size(944, 457);
             this.panel1.TabIndex = 9;
             // 
             // groupBox1
@@ -55,14 +55,14 @@
             this.groupBox1.Font = new System.Drawing.Font("宋体", 12F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 457);
+            this.groupBox1.Size = new System.Drawing.Size(357, 457);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "煤气柜设置：";
             // 
             // btn_Alter
             // 
-            this.btn_Alter.Location = new System.Drawing.Point(128, 381);
+            this.btn_Alter.Location = new System.Drawing.Point(137, 381);
             this.btn_Alter.Name = "btn_Alter";
             this.btn_Alter.Size = new System.Drawing.Size(75, 25);
             this.btn_Alter.TabIndex = 12;
@@ -71,21 +71,23 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(220, 381);
+            this.btn_Delete.Location = new System.Drawing.Point(229, 381);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(75, 25);
             this.btn_Delete.TabIndex = 11;
             this.btn_Delete.Text = "删除";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(31, 381);
+            this.btn_Add.Location = new System.Drawing.Point(40, 381);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 25);
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "添加";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // lbox_Gasometer
             // 
@@ -93,7 +95,7 @@
             this.lbox_Gasometer.ForeColor = System.Drawing.SystemColors.WindowText;
             this.lbox_Gasometer.FormattingEnabled = true;
             this.lbox_Gasometer.ItemHeight = 16;
-            this.lbox_Gasometer.Location = new System.Drawing.Point(31, 48);
+            this.lbox_Gasometer.Location = new System.Drawing.Point(40, 48);
             this.lbox_Gasometer.Name = "lbox_Gasometer";
             this.lbox_Gasometer.Size = new System.Drawing.Size(265, 292);
             this.lbox_Gasometer.TabIndex = 9;
@@ -106,6 +108,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "GasometerConfig";
             this.Size = new System.Drawing.Size(944, 457);
+            this.Load += new System.EventHandler(this.GasometerConfig_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

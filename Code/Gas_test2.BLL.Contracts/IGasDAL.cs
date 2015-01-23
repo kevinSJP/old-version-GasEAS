@@ -80,6 +80,7 @@ namespace Gas_test2.BLL
         /// </summary>
         int InsertData(string TableName, string Clom1, string str1);
         int InsertData(string TableName, string Clom1, string str1, string Clom2, string str2);
+        int InsertData(string TableName, string Clom1, string str1, string Clom2, string str2, string Clom3, string str3);
 
         /// <summary>
         /// 修改一行数据数据

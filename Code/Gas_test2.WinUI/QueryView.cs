@@ -44,9 +44,31 @@ namespace Gas_test2.WinUI
 
         private void QueryView_Load(object sender, EventArgs e)
         {
-            #region 加载tree
+            
+            FreshTree();
+            
+        }
 
-            #endregion
+        private void FreshTree()
+        {
+            dataset.Clear();
+            dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipName", "EquipTypeSlet");
+            Tree_Equip.Nodes.Clear();
+            int j = 0;
+            foreach (DataRow dr in dataset.Tables[0].Rows)
+            {
+                
+                TreeNode tn = Tree_Equip.Nodes.Add(dataset.Tables[0].Rows[j]["EquipName"].ToString());
+                int equipnum = int.Parse( dataset.Tables[0].Rows[j]["EquipNum"].ToString());
+
+                for (int i = 0; i < equipnum;i++ )
+                {
+                    TreeNode tn1 = new TreeNode((i + 1)+"#" + dataset.Tables[0].Rows[j]["EquipNum"].ToString());
+                    tn.Nodes.Add(tn1);
+                }
+
+                j++;
+            }
         }
 
         private void btn_Query_Click(object sender, EventArgs e)
@@ -188,6 +210,64 @@ namespace Gas_test2.WinUI
                     }
                 }
             }
+        }
+
+        private void Tree_Equip_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            txt_Equip.Text = "选中"+e.Node.Text;
+            InitGragh(zg1);
+        }
+
+        private void InitGragh(ZedGraph.ZedGraphControl zg)
+        {
+            GraphPane myPane = zg.GraphPane;
+
+            myPane.CurveList.Clear();
+            myPane.GraphObjList.Clear();
+
+            //Set labels
+            myPane.Title.Text = "煤气实绩";// 表头
+            myPane.XAxis.Title.Text = "时间";// 横坐标lable
+            myPane.YAxis.Title.Text = "煤气量";// 纵坐标label
+            //Set list
+            PointPairList list = new PointPairList();
+
+            //DataView dvList = new DataView(dataset.Tables[0]);
+            //foreach (DataRowView dv in dvList)
+            //{
+
+
+            //    //double x = Convert.ToDouble(dv["TIME"]);
+            //    //double x = (double)new XDate(2013, 6, 11, i, 0, 0);
+            //    DateTime xx = DateTime.Parse(dv["TIME"].ToString());
+            //    double x = (double)new XDate(xx);
+            //    if (dv["FLOW"] is DBNull)
+            //        dv["FLOW"] = 500;
+            //    double y = Convert.ToDouble(dv["FLOW"]);
+            //    list.Add(x, y);
+
+
+            //}
+
+
+            
+
+            // Generate a blue curve with circle symbols, and "My Curve 2" in the legend
+            LineItem myCurve = myPane.AddCurve("煤气量", list, Color.Blue, SymbolType.Circle);
+            // Fill the area under the curve with a white-red gradient at 45 degrees
+            myCurve.Line.Fill = new Fill(Color.White, Color.Red, 45F);
+            // Make the symbols opaque by filling them with white
+            myCurve.Symbol.Fill = new Fill(Color.White);
+            // Fill the axis background with a color gradient
+            myPane.Chart.Fill = new Fill(Color.White, Color.LightGoldenrodYellow, 45F);
+            // Fill the pane background with a color gradient
+            myPane.Fill = new Fill(Color.White, Color.FromArgb(220, 220, 255), 45F);
+            //Calculate the Axis Scale Ranges
+            myPane.XAxis.Type = AxisType.Date;
+
+            myPane.AxisChange();
+
+            SetSize();
         }
 
 
