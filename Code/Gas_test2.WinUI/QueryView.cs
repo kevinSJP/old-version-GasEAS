@@ -85,17 +85,17 @@ namespace Gas_test2.WinUI
             dataset.Clear();
             if (CkListBox1.GetItemChecked(0))
             {
-                dataset = ServiceContainer.GetService<IGasDAL>().QueryData("TIME , FLOW", ModuleClass.FuncClass.ActivContrl[1].ToString() + Num[0] + "_REAL", "TIME", StartTime, EndTime);
+                dataset = ServiceContainer.GetService<IGasDAL>().QueryData("TIME , FLOW", Num[1] + Num[0] + "_REAL", "TIME", StartTime, EndTime);
 
                 //dataset = ServiceContainer.GetService<IGasDAL>().QueryData(ModuleClass.FuncClass.ActivContrl[1].ToString() + Num[0] + "_REAL");
             }
             if (CkListBox1.GetItemChecked(1))
             {
-                dataset = ServiceContainer.GetService<IGasDAL>().QueryData(ModuleClass.FuncClass.ActivContrl[1].ToString() + Num[0] + "_FCST");
+                dataset = ServiceContainer.GetService<IGasDAL>().QueryData(Num[1] + Num[0] + "_FCST");
             }
             if (CkListBox1.GetItemChecked(2))
             {
-                dataset = ServiceContainer.GetService<IGasDAL>().QueryData(ModuleClass.FuncClass.ActivContrl[1].ToString() + Num[0] + "_REAL");
+                dataset = ServiceContainer.GetService<IGasDAL>().QueryData(Num[1] + Num[0] + "_REAL");
             }
 
             ////设置DG

@@ -59,10 +59,11 @@ namespace Gas_test2.WinUI.CtrlView
                     for (int i = 0; i < datasetAlg.Tables[0].Rows.Count; i++)
                     {
                         comboxcell0.Items.Add(datasetAlg.Tables[0].Rows[i]["AlgName"]);
+                        //comboxcell0.Selected
                     }
                     row.Cells.Add(comboxcell0);
-                    comboxcell0.DisplayMember = dataset.Tables[0].Rows[j]["AlgName"].ToString();
-                    //comboxcell0.Value = dataset.Tables[0].Rows[j]["AlgName"];
+                    //comboxcell0.DisplayMember = dataset.Tables[0].Rows[j]["AlgName"].ToString();
+                    comboxcell0.Value = dataset.Tables[0].Rows[j]["AlgName"].ToString();
                     
                     
                     for (int i = 0; i < FactorD.Count() - 1; i++)
@@ -72,12 +73,10 @@ namespace Gas_test2.WinUI.CtrlView
                         //comboxcell.Value=FactorD[i];
                         row.Cells.Add(comboxcell);
                         
-
                     }
                     
 
                     DG_Alg.Rows.Add(row);
-
 
                     j++;
                 }
@@ -133,6 +132,7 @@ namespace Gas_test2.WinUI.CtrlView
                 cbox_Eq.Items.Add(dataset.Tables[0].Rows[j][0]);
                 j++;
             }
+            cbox_Eq.SelectedIndex = 1;
         }
 
         private void Tree_Alg_DoubleClick(object sender, EventArgs e)

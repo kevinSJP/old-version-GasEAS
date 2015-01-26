@@ -31,29 +31,32 @@
             this.components = new System.ComponentModel.Container();
             this.Tree_Ometer = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_Equip = new System.Windows.Forms.TextBox();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.btn_Forecast = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbCtrl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.zg1 = new ZedGraph.ZedGraphControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DG1 = new System.Windows.Forms.DataGridView();
-            this.btn_Forecast = new System.Windows.Forms.Button();
-            this.lab_Alg = new System.Windows.Forms.Label();
-            this.cbox2 = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.lab_EndTime = new System.Windows.Forms.Label();
+            this.lab_StartTime = new System.Windows.Forms.Label();
+            this.DTP2 = new System.Windows.Forms.DateTimePicker();
+            this.DTP1 = new System.Windows.Forms.DateTimePicker();
+            this.CkListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tbCtrl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tree_Ometer
@@ -63,17 +66,69 @@
             this.Tree_Ometer.Name = "Tree_Ometer";
             this.Tree_Ometer.Size = new System.Drawing.Size(200, 457);
             this.Tree_Ometer.TabIndex = 0;
+            this.Tree_Ometer.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.Tree_Ometer_AfterSelect);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.CkListBox1);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btn_Forecast);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(200, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 104);
             this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.txt_Equip);
+            this.panel4.Controls.Add(this.lbl2);
+            this.panel4.Controls.Add(this.lbl1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(189, 104);
+            this.panel4.TabIndex = 14;
+            // 
+            // txt_Equip
+            // 
+            this.txt_Equip.Location = new System.Drawing.Point(83, 14);
+            this.txt_Equip.Name = "txt_Equip";
+            this.txt_Equip.ReadOnly = true;
+            this.txt_Equip.Size = new System.Drawing.Size(98, 21);
+            this.txt_Equip.TabIndex = 8;
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Location = new System.Drawing.Point(20, 54);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(65, 12);
+            this.lbl2.TabIndex = 7;
+            this.lbl2.Text = "预测时长：";
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("宋体", 9F);
+            this.lbl1.Location = new System.Drawing.Point(20, 17);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(65, 12);
+            this.lbl1.TabIndex = 6;
+            this.lbl1.Text = "当前设备：";
+            // 
+            // btn_Forecast
+            // 
+            this.btn_Forecast.Font = new System.Drawing.Font("宋体", 12F);
+            this.btn_Forecast.Location = new System.Drawing.Point(640, 17);
+            this.btn_Forecast.Name = "btn_Forecast";
+            this.btn_Forecast.Size = new System.Drawing.Size(87, 67);
+            this.btn_Forecast.TabIndex = 0;
+            this.btn_Forecast.Text = "预测";
+            this.btn_Forecast.UseVisualStyleBackColor = true;
+            this.btn_Forecast.Click += new System.EventHandler(this.btn_Forecast_Click);
             // 
             // panel2
             // 
@@ -128,7 +183,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(736, 321);
+            this.tabPage2.Size = new System.Drawing.Size(736, 327);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "数据";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -140,89 +195,89 @@
             this.DG1.Location = new System.Drawing.Point(3, 3);
             this.DG1.Name = "DG1";
             this.DG1.RowTemplate.Height = 23;
-            this.DG1.Size = new System.Drawing.Size(730, 315);
+            this.DG1.Size = new System.Drawing.Size(730, 321);
             this.DG1.TabIndex = 0;
-            // 
-            // btn_Forecast
-            // 
-            this.btn_Forecast.Location = new System.Drawing.Point(612, 23);
-            this.btn_Forecast.Name = "btn_Forecast";
-            this.btn_Forecast.Size = new System.Drawing.Size(87, 67);
-            this.btn_Forecast.TabIndex = 0;
-            this.btn_Forecast.Text = "预测";
-            this.btn_Forecast.UseVisualStyleBackColor = true;
-            // 
-            // lab_Alg
-            // 
-            this.lab_Alg.AutoSize = true;
-            this.lab_Alg.Location = new System.Drawing.Point(20, 16);
-            this.lab_Alg.Name = "lab_Alg";
-            this.lab_Alg.Size = new System.Drawing.Size(65, 12);
-            this.lab_Alg.TabIndex = 0;
-            this.lab_Alg.Text = "算法选择：";
-            // 
-            // cbox2
-            // 
-            this.cbox2.FormattingEnabled = true;
-            this.cbox2.Location = new System.Drawing.Point(22, 50);
-            this.cbox2.Name = "cbox2";
-            this.cbox2.Size = new System.Drawing.Size(121, 20);
-            this.cbox2.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.cbox2);
-            this.panel3.Controls.Add(this.lab_Alg);
+            this.panel3.Controls.Add(this.lab_EndTime);
+            this.panel3.Controls.Add(this.lab_StartTime);
+            this.panel3.Controls.Add(this.DTP2);
+            this.panel3.Controls.Add(this.DTP1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(189, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(222, 104);
-            this.panel3.TabIndex = 13;
+            this.panel3.Size = new System.Drawing.Size(268, 104);
+            this.panel3.TabIndex = 15;
             // 
-            // panel4
+            // lab_EndTime
             // 
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.lbl2);
-            this.panel4.Controls.Add(this.lbl1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(222, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(253, 104);
-            this.panel4.TabIndex = 14;
+            this.lab_EndTime.AutoSize = true;
+            this.lab_EndTime.Font = new System.Drawing.Font("宋体", 9F);
+            this.lab_EndTime.Location = new System.Drawing.Point(21, 59);
+            this.lab_EndTime.Name = "lab_EndTime";
+            this.lab_EndTime.Size = new System.Drawing.Size(59, 12);
+            this.lab_EndTime.TabIndex = 11;
+            this.lab_EndTime.Text = "截止时间:";
             // 
-            // textBox2
+            // lab_StartTime
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 21);
-            this.textBox2.TabIndex = 9;
+            this.lab_StartTime.AutoSize = true;
+            this.lab_StartTime.Font = new System.Drawing.Font("宋体", 9F);
+            this.lab_StartTime.Location = new System.Drawing.Point(21, 23);
+            this.lab_StartTime.Name = "lab_StartTime";
+            this.lab_StartTime.Size = new System.Drawing.Size(65, 12);
+            this.lab_StartTime.TabIndex = 10;
+            this.lab_StartTime.Text = "起始时间：";
             // 
-            // textBox1
+            // DTP2
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(134, 21);
-            this.textBox1.TabIndex = 8;
+            this.DTP2.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.DTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTP2.Location = new System.Drawing.Point(92, 54);
+            this.DTP2.Name = "DTP2";
+            this.DTP2.Size = new System.Drawing.Size(144, 21);
+            this.DTP2.TabIndex = 9;
+            this.DTP2.Value = new System.DateTime(2013, 6, 17, 12, 41, 0, 0);
             // 
-            // lbl2
+            // DTP1
             // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(20, 54);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(65, 12);
-            this.lbl2.TabIndex = 7;
-            this.lbl2.Text = "预测时长：";
+            this.DTP1.CustomFormat = "yyyy-MM-dd HH:mm";
+            this.DTP1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTP1.Location = new System.Drawing.Point(92, 17);
+            this.DTP1.Name = "DTP1";
+            this.DTP1.Size = new System.Drawing.Size(144, 21);
+            this.DTP1.TabIndex = 8;
+            this.DTP1.Value = new System.DateTime(2013, 6, 17, 10, 41, 0, 0);
             // 
-            // lbl1
+            // CkListBox1
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(20, 17);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(65, 12);
-            this.lbl1.TabIndex = 6;
-            this.lbl1.Text = "当前时间：";
+            this.CkListBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.CkListBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CkListBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.CkListBox1.FormattingEnabled = true;
+            this.CkListBox1.Items.AddRange(new object[] {
+            "煤气实际流量",
+            "煤气预测流量",
+            "预测误差"});
+            this.CkListBox1.Location = new System.Drawing.Point(457, 0);
+            this.CkListBox1.Name = "CkListBox1";
+            this.CkListBox1.Size = new System.Drawing.Size(168, 104);
+            this.CkListBox1.TabIndex = 16;
+            this.CkListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CkListBox1_ItemCheck);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "15",
+            "30",
+            "60"});
+            this.comboBox1.Location = new System.Drawing.Point(81, 51);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 20);
+            this.comboBox1.TabIndex = 10;
+            this.comboBox1.Text = "15";
             // 
             // GasometerView
             // 
@@ -233,7 +288,10 @@
             this.Controls.Add(this.Tree_Ometer);
             this.Name = "GasometerView";
             this.Size = new System.Drawing.Size(944, 457);
+            this.Load += new System.EventHandler(this.GasometerView_Load);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tbCtrl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -241,8 +299,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DG1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,12 +315,15 @@
         private System.Windows.Forms.DataGridView DG1;
         private System.Windows.Forms.Button btn_Forecast;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Equip;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cbox2;
-        private System.Windows.Forms.Label lab_Alg;
+        private System.Windows.Forms.Label lab_EndTime;
+        private System.Windows.Forms.Label lab_StartTime;
+        private System.Windows.Forms.DateTimePicker DTP2;
+        private System.Windows.Forms.DateTimePicker DTP1;
+        public System.Windows.Forms.CheckedListBox CkListBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

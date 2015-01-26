@@ -12,6 +12,7 @@ namespace Gas_test2.WinUI.ModuleClass
     {
         #region UI属性
         public static string clikUI;
+        public static string clikView;
         public static string[] ActivContrl=new string[2];
         #endregion
         

@@ -100,7 +100,7 @@ namespace Gas_test2.WinUI.CtrlView
             {
 
                 /////////删除表一行数据
-                ServiceContainer.GetService<IGasDAL>().DeleteData("EquipTypeSlet", "EquipName", lbox_Gasometer.SelectedItem.ToString());
+                ServiceContainer.GetService<IGasDAL>().DeleteData("GasometerType", "GasometerName", lbox_Gasometer.SelectedItem.ToString());
                 lbox_Gasometer.Items.RemoveAt(lbox_Gasometer.SelectedIndex);
                 
                 FreshLbox("EquipName", "EquipTypeSlet", "lbox_Gasometer");

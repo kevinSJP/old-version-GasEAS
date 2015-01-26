@@ -33,12 +33,12 @@
             this.cbox_Eq = new System.Windows.Forms.ComboBox();
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.DG_Alg = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.C_Alg = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.gbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -90,9 +90,18 @@
             this.DG_Alg.Size = new System.Drawing.Size(642, 372);
             this.DG_Alg.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DG_Alg);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(642, 372);
+            this.panel1.TabIndex = 8;
+            // 
             // C_Alg
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F);
             this.C_Alg.DefaultCellStyle = dataGridViewCellStyle1;
             this.C_Alg.HeaderText = "可选算法";
             this.C_Alg.Name = "C_Alg";
@@ -116,15 +125,6 @@
             // 
             this.C_Factor4.HeaderText = "算法因素4";
             this.C_Factor4.Name = "C_Factor4";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DG_Alg);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 372);
-            this.panel1.TabIndex = 8;
             // 
             // EquipAndAlg
             // 
