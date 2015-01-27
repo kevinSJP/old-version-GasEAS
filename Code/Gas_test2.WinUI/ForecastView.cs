@@ -87,16 +87,19 @@ namespace Gas_test2.WinUI
 
                 j++;
             }
-            int asa;
+            Tree_Equip.SelectedNode = null;
         }
 
 
         private void Tree_Equip_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            txt_Equip.Text = "选中" + e.Node.Text;
-            //FreshTxt(e.Node.Text);
-            InitGragh(zg1);
-            //InitTimer2();
+            if (Tree_Equip.SelectedNode.Level == 1)
+            {
+                txt_Equip.Text = "选中" + e.Node.Text;
+                FreshTxt(e.Node.Text);
+                InitGragh(zg1);
+                InitTimer2();
+            }
         }
 
         private void FreshTxt(string selected)
@@ -104,7 +107,7 @@ namespace Gas_test2.WinUI
             string[] Row = selected.Split('#');
 
             dataset.Clear();
-            dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipTypeSlet", "EquipName", Row[0]);
+            dataset = ServiceContainer.GetService<IGasDAL>().QueryData("EquipTypeSlet", "EquipName", Row[1]);
             txtAlg.Text = dataset.Tables[0].Rows[0]["ForecastAlg"].ToString();
             txtDuration.Text = dataset.Tables[0].Rows[0]["Duration"].ToString();
             //triggerTime = int.Parse(dataset.Tables[0].Rows[0]["TriggerTime"].ToString());

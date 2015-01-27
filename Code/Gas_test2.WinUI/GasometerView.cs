@@ -267,8 +267,11 @@ namespace Gas_test2.WinUI
 
         private void Tree_Ometer_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            txt_Equip.Text = "选中" + e.Node.Text;
-            InitGragh(zg1);
+            if (Tree_Ometer.SelectedNode.Level == 1)
+            {
+                txt_Equip.Text = "选中" + e.Node.Text;
+                InitGragh(zg1);
+            }
 
         }
 

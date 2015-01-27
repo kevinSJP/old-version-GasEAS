@@ -214,8 +214,11 @@ namespace Gas_test2.WinUI
 
         private void Tree_Equip_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            txt_Equip.Text = "选中"+e.Node.Text;
-            InitGragh(zg1);
+            if (Tree_Equip.SelectedNode.Level == 1)
+            {
+                txt_Equip.Text = "选中" + e.Node.Text;
+                InitGragh(zg1);
+            }
         }
 
         private void InitGragh(ZedGraph.ZedGraphControl zg)
