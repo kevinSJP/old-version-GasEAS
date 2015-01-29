@@ -55,7 +55,8 @@ namespace Gas_test2.WinUI
             var vService = ServiceContainer.GetService<IGasBLL>();
             try
             {
-                vService.Forecast("blank");
+                //vService.Forecast("blank");
+                vService.Forecast();
             }
             catch (System.Exception exc)
             {

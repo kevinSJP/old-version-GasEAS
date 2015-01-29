@@ -83,6 +83,12 @@
     <Compile Include="Config.Designer.cs">
       <DependentUpon>Config.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtrlView\banner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlView\banner.Designer.cs">
+      <DependentUpon>banner.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtrlView\EquipAndAlg.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Config.resx">
       <DependentUpon>Config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtrlView\banner.resx">
+      <DependentUpon>banner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtrlView\EquipAndAlg.resx">
       <DependentUpon>EquipAndAlg.cs</DependentUpon>

@@ -23,6 +23,21 @@ namespace Gas_test2.BLL
         private DataClass dataControl = new DataClass();
         System.Threading.Timer Thread_Time;
 
+        public int Forecast( )
+        {
+            Thread_Time = new System.Threading.Timer(Thread_Timer_Method2, null, 0, 2000);  //定时器
+            return 0;
+        }
+
+        private void Thread_Timer_Method2(object state)
+        {
+            //定时启动几个线程
+            //取数据库数据
+            //调用算法计算
+            //数据返回数据库
+            //释放线程
+        }
+
         public int Forecast(string AlgName)
         {
             

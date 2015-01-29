@@ -8,6 +8,7 @@ namespace Gas_test2.BLL
 {
     public interface IGasBLL
     {
+        int Forecast();
         int Forecast(string AlgName);
         int StopForecast();
     }
