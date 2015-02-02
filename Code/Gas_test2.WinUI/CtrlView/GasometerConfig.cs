@@ -35,6 +35,12 @@ namespace Gas_test2.WinUI.CtrlView
         {
             
             FreshLbox("GasometerName", "GasometerType", "lbox_Gasometer");
+
+            CtrlView.banner Ctrl0 = new CtrlView.banner();
+            panel1.Controls.Clear();
+            panel1.Controls.Add(Ctrl0);
+            Ctrl0.Size.Height=100;
+            Ctrl0.Dock = DockStyle.Top;
         }
 
         /// <summary>
@@ -76,6 +82,8 @@ namespace Gas_test2.WinUI.CtrlView
             foreach (DataRow dr in dataset.Tables[0].Rows)
             {
                 lbox_Gasometer.Items.Add(dataset.Tables[0].Rows[j][cloum]);
+                //panel
+
                 j++;
             }       
             
