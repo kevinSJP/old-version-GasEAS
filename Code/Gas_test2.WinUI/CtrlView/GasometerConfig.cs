@@ -36,11 +36,7 @@ namespace Gas_test2.WinUI.CtrlView
             
             FreshLbox("GasometerName", "GasometerType", "lbox_Gasometer");
 
-            CtrlView.banner Ctrl0 = new CtrlView.banner();
-            panel1.Controls.Clear();
-            panel1.Controls.Add(Ctrl0);
-            Ctrl0.Size.Height=100;
-            Ctrl0.Dock = DockStyle.Top;
+           
         }
 
         /// <summary>
@@ -85,9 +81,13 @@ namespace Gas_test2.WinUI.CtrlView
                 //panel
 
                 j++;
-            }       
-            
+            }
 
+            CtrlView.banner Ctrl0 = new CtrlView.banner();
+            panel1.Controls.Clear();
+            panel1.Controls.Add(Ctrl0);
+            Ctrl0.Height = (panel1.Size.Height - 40) / 3;
+            Ctrl0.Dock = DockStyle.Top;
 
         }
 

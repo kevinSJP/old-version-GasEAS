@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tree_Alg = new System.Windows.Forms.TreeView();
             this.cbox_Eq = new System.Windows.Forms.ComboBox();
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.DG_Alg = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.C_Alg = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.C_Factor4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Enter = new System.Windows.Forms.Button();
             this.gbox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Alg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // gbox1
             // 
+            this.gbox1.Controls.Add(this.btn_Enter);
             this.gbox1.Controls.Add(this.cbox_Eq);
             this.gbox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbox1.Font = new System.Drawing.Font("宋体", 12F);
@@ -90,19 +92,10 @@
             this.DG_Alg.Size = new System.Drawing.Size(642, 372);
             this.DG_Alg.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DG_Alg);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(642, 372);
-            this.panel1.TabIndex = 8;
-            // 
             // C_Alg
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F);
-            this.C_Alg.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F);
+            this.C_Alg.DefaultCellStyle = dataGridViewCellStyle2;
             this.C_Alg.HeaderText = "可选算法";
             this.C_Alg.Name = "C_Alg";
             // 
@@ -125,6 +118,25 @@
             // 
             this.C_Factor4.HeaderText = "算法因素4";
             this.C_Factor4.Name = "C_Factor4";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.DG_Alg);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(642, 372);
+            this.panel1.TabIndex = 8;
+            // 
+            // btn_Enter
+            // 
+            this.btn_Enter.Location = new System.Drawing.Point(535, 31);
+            this.btn_Enter.Name = "btn_Enter";
+            this.btn_Enter.Size = new System.Drawing.Size(75, 23);
+            this.btn_Enter.TabIndex = 1;
+            this.btn_Enter.Text = "确认";
+            this.btn_Enter.UseVisualStyleBackColor = true;
+            this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // EquipAndAlg
             // 
@@ -155,6 +167,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor2;
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor3;
         private System.Windows.Forms.DataGridViewComboBoxColumn C_Factor4;
+        private System.Windows.Forms.Button btn_Enter;
 
     }
 }

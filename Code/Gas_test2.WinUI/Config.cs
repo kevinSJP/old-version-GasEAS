@@ -44,6 +44,7 @@ namespace Gas_test2.WinUI
 
         private void Config_Load(object sender, EventArgs e)
         {
+            
             //CtrlView.GasometerConfig Ctrl = new CtrlView.GasometerConfig();
             //panel1.Controls.Add(Ctrl);
             btn_Next.Text = "开始配置";

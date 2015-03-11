@@ -132,7 +132,7 @@ namespace Gas_test2.WinUI.CtrlView
                 cbox_Eq.Items.Add(dataset.Tables[0].Rows[j][0]);
                 j++;
             }
-            cbox_Eq.SelectedIndex = 1;
+            cbox_Eq.SelectedIndex = 0;
         }
 
         private void Tree_Alg_DoubleClick(object sender, EventArgs e)
@@ -143,6 +143,11 @@ namespace Gas_test2.WinUI.CtrlView
         private void cbox_Eq_SelectedIndexChanged(object sender, EventArgs e)
         {
             FreshDG();
+        }
+
+        private void btn_Enter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
