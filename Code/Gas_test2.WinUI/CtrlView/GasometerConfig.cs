@@ -33,10 +33,11 @@ namespace Gas_test2.WinUI.CtrlView
 
         private void GasometerConfig_Load(object sender, EventArgs e)
         {
-            
-            FreshLbox("GasometerName", "GasometerType", "lbox_Gasometer");
 
-           
+            Setsize();
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            FreshUI("GasometerName", "GasometerType", "lbox_Gasometer");
+            
         }
 
         /// <summary>
@@ -45,7 +46,7 @@ namespace Gas_test2.WinUI.CtrlView
         /// <param name="cloum">列名</param>
         /// <param name="tab">表名</param>
         /// <param name="listbox">listbox名</param>
-        private void FreshLbox(string cloum, string tab, string listbox)
+        private void FreshUI(string cloum, string tab, string listbox)
         {
             /*
             dataset.Clear();
@@ -72,22 +73,31 @@ namespace Gas_test2.WinUI.CtrlView
             //if (listbox == "lbox_Gasometer")
             //{}
             lbox_Gasometer.Items.Clear();
+            panel1.Controls.Clear();
             dataset.Clear();
-            dataset = ServiceContainer.GetService<IGasDAL>().QueryData(cloum, tab);
+            dataset = ServiceContainer.GetService<IGasDAL>().QueryData( tab);
             int j = 0;
             foreach (DataRow dr in dataset.Tables[0].Rows)
             {
+                //Listbox
                 lbox_Gasometer.Items.Add(dataset.Tables[0].Rows[j][cloum]);
-                //panel
+
+                //Panel
+                
+                Panel panelBar= new Panel();
+                panel1.Controls.Add(panelBar);
+                panelBar.BorderStyle = BorderStyle.FixedSingle;
+                panelBar.Location = new Point(10, 10 + panel1.Height*j / 4);
+                panelBar.Size = new Size(this.ClientRectangle.Width, this.ClientRectangle.Height / 4);
+                   
+                banner bar = new banner();
+                bar.LabelText = dataset.Tables[0].Rows[j][cloum].ToString();
+                bar.UDNum =int.Parse( dataset.Tables[0].Rows[j]["GasometerNum"].ToString());
+                panelBar.Controls.Add(bar);
 
                 j++;
             }
 
-            CtrlView.banner Ctrl0 = new CtrlView.banner();
-            panel1.Controls.Clear();
-            panel1.Controls.Add(Ctrl0);
-            Ctrl0.Height = (panel1.Size.Height - 40) / 3;
-            Ctrl0.Dock = DockStyle.Top;
 
         }
 
@@ -98,7 +108,7 @@ namespace Gas_test2.WinUI.CtrlView
             addequip.ShowDialog();
             addequip.Dispose();
             
-            FreshLbox("GasometerName", "GasometerType", "lbox_Gasometer");
+            FreshUI("GasometerName", "GasometerType", "lbox_Gasometer");
             
         }
 
@@ -111,12 +121,27 @@ namespace Gas_test2.WinUI.CtrlView
                 ServiceContainer.GetService<IGasDAL>().DeleteData("GasometerType", "GasometerName", lbox_Gasometer.SelectedItem.ToString());
                 lbox_Gasometer.Items.RemoveAt(lbox_Gasometer.SelectedIndex);
                 
-                FreshLbox("EquipName", "EquipTypeSlet", "lbox_Gasometer");
+                FreshUI("EquipName", "EquipTypeSlet", "lbox_Gasometer");
             }
             catch
             {
                 MessageBox.Show("选择删除项");
             }
+        }
+
+        private void GasometerConfig_SizeChanged(object sender, EventArgs e)
+        {
+            Setsize();
+        }
+
+        private void Setsize()
+        {
+            groupBox1.Location = new Point(10, 10);
+            groupBox1.Size = new Size((this.ClientRectangle.Width - 30)/4, this.ClientRectangle.Height - 20);
+
+            panel1.Location = new Point((this.ClientRectangle.Width - 30) / 4+20,  10);
+            panel1.Size = new Size((this.ClientRectangle.Width - 30)*3/4, this.ClientRectangle.Height - 20);
+
         }
     }
 }

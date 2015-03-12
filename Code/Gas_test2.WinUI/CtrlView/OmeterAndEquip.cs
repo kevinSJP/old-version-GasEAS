@@ -140,6 +140,11 @@ namespace Gas_test2.WinUI.CtrlView
             }
         }
 
+        private void DG_In_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
 
     }

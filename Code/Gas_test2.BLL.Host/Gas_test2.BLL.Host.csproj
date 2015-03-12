@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="GasDAL.cs" />
     <Compile Include="GasForecast.cs" />
+    <Compile Include="pop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

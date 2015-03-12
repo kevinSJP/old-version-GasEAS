@@ -99,6 +99,7 @@
             this.DG_In.RowTemplate.Height = 23;
             this.DG_In.Size = new System.Drawing.Size(505, 229);
             this.DG_In.TabIndex = 2;
+            this.DG_In.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_In_CellValueChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 

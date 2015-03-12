@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Alter = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.lbox_Gasometer = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 457);
-            this.panel1.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -100,15 +92,23 @@
             this.lbox_Gasometer.Size = new System.Drawing.Size(265, 292);
             this.lbox_Gasometer.TabIndex = 9;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(398, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(519, 380);
+            this.panel1.TabIndex = 11;
+            // 
             // GasometerConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "GasometerConfig";
             this.Size = new System.Drawing.Size(944, 457);
             this.Load += new System.EventHandler(this.GasometerConfig_Load);
+            this.SizeChanged += new System.EventHandler(this.GasometerConfig_SizeChanged);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -116,11 +116,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Alter;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ListBox lbox_Gasometer;
+        private System.Windows.Forms.Panel panel1;
     }
 }
